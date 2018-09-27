@@ -24,7 +24,7 @@ import axios from "axios";
 
 export function fetchImages(dispatch) {
 	axios
-		.get("https://pixabay.com/api/?key=10010304-40393dc53945c9ee690c7ec04")
+		.get(`https://pixabay.com/api/?key=${process.env.REACT_APP_KEY}`)
 		.then(res => {
 			dispatch({
 				type: images.FETCH_START
